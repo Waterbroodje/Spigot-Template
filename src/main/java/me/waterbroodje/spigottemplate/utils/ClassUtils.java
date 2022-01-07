@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class ClassUtils {
 
-    public Set<Class> findAllClassesUsingClassLoader(String packageName) {
+    public Set<Class> getClasses(String packageName) {
         InputStream stream = ClassLoader.getSystemClassLoader()
                 .getResourceAsStream(packageName.replaceAll("[.]", "/"));
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
@@ -27,5 +27,4 @@ public class ClassUtils {
         }
         return null;
     }
-
 }
