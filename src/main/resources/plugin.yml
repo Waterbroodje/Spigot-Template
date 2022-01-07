@@ -1,0 +1,5 @@
+name: SpigotTemplate
+version: '${project.version}'
+main: me.waterbroodje.spigottemplate.Main
+api-version: 1.16
+authors: [ Waterbroodje ]
