@@ -17,7 +17,7 @@ public final class Main extends JavaPlugin {
         instance = this;
         listenerManager = new ListenerManager();
         mySQL = new MySQL();
-        sqlModules = new SQLModules(this);
+        sqlModules = new SQLModules();
 
         listenerManager.register();
     }
