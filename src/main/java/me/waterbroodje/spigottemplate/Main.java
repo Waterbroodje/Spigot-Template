@@ -14,6 +14,10 @@ public final class Main extends JavaPlugin {
     private static MySQL mySQL;
     private static SQLModules sqlModules;
 
+    public static CommandManager getCommandManager() {
+        return commandManager;
+    }
+
     @Override
     public void onEnable() {
         saveDefaultConfig();
