@@ -4,7 +4,14 @@ import me.waterbroodje.spigottemplate.commands.CommandManager;
 import me.waterbroodje.spigottemplate.database.MySQL;
 import me.waterbroodje.spigottemplate.database.SQLModules;
 import me.waterbroodje.spigottemplate.listeners.ListenerManager;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
+import java.util.UUID;
 
 public final class Main extends JavaPlugin {
 
@@ -13,10 +20,6 @@ public final class Main extends JavaPlugin {
     private static CommandManager commandManager;
     private static MySQL mySQL;
     private static SQLModules sqlModules;
-
-    public static CommandManager getCommandManager() {
-        return commandManager;
-    }
 
     @Override
     public void onEnable() {
@@ -31,6 +34,8 @@ public final class Main extends JavaPlugin {
         listenerManager.register();
         commandManager.register();
         mySQL.mysqlSetup();
+
+
     }
 
     @Override
@@ -52,5 +57,9 @@ public final class Main extends JavaPlugin {
 
     public static SQLModules getSqlModules() {
         return sqlModules;
+    }
+
+    public static CommandManager getCommandManager() {
+        return commandManager;
     }
 }
