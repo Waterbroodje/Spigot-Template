@@ -1,5 +1,6 @@
 package me.waterbroodje.spigottemplate;
 
+import me.waterbroodje.spigottemplate.commands.CommandManager;
 import me.waterbroodje.spigottemplate.database.MySQL;
 import me.waterbroodje.spigottemplate.database.SQLModules;
 import me.waterbroodje.spigottemplate.listeners.ListenerManager;
@@ -9,6 +10,7 @@ public final class Main extends JavaPlugin {
 
     private static Main instance;
     private static ListenerManager listenerManager;
+    private static CommandManager commandManager;
     private static MySQL mySQL;
     private static SQLModules sqlModules;
 
@@ -16,10 +18,12 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         instance = this;
         listenerManager = new ListenerManager();
+        commandManager = new CommandManager();
         mySQL = new MySQL();
         sqlModules = new SQLModules();
 
         listenerManager.register();
+        commandManager.register();
     }
 
     @Override
