@@ -4,6 +4,7 @@ import me.waterbroodje.spigottemplate.commands.CommandManager;
 import me.waterbroodje.spigottemplate.database.MySQL;
 import me.waterbroodje.spigottemplate.database.SQLModules;
 import me.waterbroodje.spigottemplate.listeners.ListenerManager;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -61,5 +62,9 @@ public final class Main extends JavaPlugin {
 
     public static CommandManager getCommandManager() {
         return commandManager;
+    }
+
+    public static String chat(String s) {
+        return ChatColor.translateAlternateColorCodes('&', s);
     }
 }
