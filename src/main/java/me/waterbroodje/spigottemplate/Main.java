@@ -16,6 +16,8 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         instance = this;
         listenerManager = new ListenerManager();
         commandManager = new CommandManager();
@@ -24,6 +26,7 @@ public final class Main extends JavaPlugin {
 
         listenerManager.register();
         commandManager.register();
+        mySQL.mysqlSetup();
     }
 
     @Override
