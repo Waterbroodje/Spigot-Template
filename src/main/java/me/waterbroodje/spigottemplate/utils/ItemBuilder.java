@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemBuilder {
-
     private final ItemStack stack;
 
     public ItemBuilder(ItemStack stack) {
