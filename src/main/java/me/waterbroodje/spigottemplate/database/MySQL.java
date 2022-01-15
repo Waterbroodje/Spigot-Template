@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MySQL {
-
     private Connection connection;
     private String host = Main.getInstance().getConfig().getString("database.host");
     private String port = Main.getInstance().getConfig().getString("database.port");
