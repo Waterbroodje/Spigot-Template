@@ -69,5 +69,4 @@ public class ItemBuilder {
     public ItemStack toItemStack() {
         return stack;
     }
-
 }
